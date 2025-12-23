@@ -41,8 +41,8 @@ const Products = () => {
     ];
 
     return (
-        <section className="w-full p-6 flex flex-col justify-center items-center gap-[100px]">
-            <div className="w-full pt-20 pb-[100px] px-[100px] bg-[#171717] rounded-[32px] flex flex-col justify-center items-center gap-[100px]">
+        <section className="w-full p-6 flex flex-col justify-center items-center gap-[80px]">
+            <div className="w-full pt-20 pb-[100px] px-[100px] bg-[#171717] rounded-[32px] flex flex-col justify-center items-center gap-[80px]">
                 {/* Header */}
                 <div className="self-stretch flex flex-col justify-start items-center gap-3">
                     <div className="self-stretch flex justify-center items-center gap-2.5">

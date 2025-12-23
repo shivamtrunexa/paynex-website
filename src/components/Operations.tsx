@@ -2,7 +2,7 @@ import { Archive, Lock, TicketSlash, TrendingUp } from "lucide-react";
 
 const Operations = () => {
     return (
-        <section className="w-full h-full px-6 lg:px-12 2xl:px-[320px] py-[100px] bg-[#F3F3F3] overflow-hidden flex flex-col justify-center items-center gap-[100px]">
+        <section className="w-full h-full px-6 lg:px-12 2xl:px-[320px] py-[80px] bg-[#F3F3F3] overflow-hidden flex flex-col justify-center items-center gap-[100px]">
             {/* Header Container */}
             <div className="w-full flex flex-col justify-start items-center gap-3">
                 {/* Heading 1 */}
