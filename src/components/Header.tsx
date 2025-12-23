@@ -36,6 +36,62 @@ const Header = () => {
         }
     };
 
+    // Scroll detection - Update active section based on viewport
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '-100px 0px -66% 0px', // Adjusted for better detection
+            threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+        };
+
+        let currentSections: { id: string; ratio: number }[] = [];
+
+        const observerCallback = (entries: IntersectionObserverEntry[]) => {
+            // Update the list of currently intersecting sections
+            entries.forEach((entry) => {
+                const sectionId = entry.target.id;
+                if (!sectionId) return;
+
+                if (entry.isIntersecting) {
+                    // Add or update section
+                    const existingIndex = currentSections.findIndex(s => s.id === sectionId);
+                    if (existingIndex >= 0) {
+                        currentSections[existingIndex].ratio = entry.intersectionRatio;
+                    } else {
+                        currentSections.push({ id: sectionId, ratio: entry.intersectionRatio });
+                    }
+                } else {
+                    // Remove section
+                    currentSections = currentSections.filter(s => s.id !== sectionId);
+                }
+            });
+
+            // Find the section with highest intersection ratio
+            if (currentSections.length > 0) {
+                const mostVisible = currentSections.reduce((prev, current) =>
+                    current.ratio > prev.ratio ? current : prev
+                );
+                setActiveSection(mostVisible.id);
+            }
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        // Observe all sections
+        navLinks.forEach((link) => {
+            const sectionId = link.href.replace("#", "");
+            const element = document.getElementById(sectionId);
+            if (element) {
+                observer.observe(element);
+            }
+        });
+
+        return () => {
+            observer.disconnect();
+            currentSections = [];
+        };
+    }, []);
+
     // Update indicator position when active section changes
     useEffect(() => {
         if (navRef.current) {
@@ -50,7 +106,7 @@ const Header = () => {
     }, [activeSection]);
 
     return (
-        <header className="w-screen bg-white fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-gray-100">
+        <header className="w-screen bg-white/90 fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-gray-100">
             <div className="hidden fixed top-10 w-screen h-32 bg-green-500 md:bg-green-600 lg:bg-red-500 xl:bg-blue-500 2xl:bg-yellow-500 3xl:bg-purple-500 4xl:bg-pink-500"></div>
             <div className="max-w-[1920px] mx-auto 3xl:px-[100px] 4xl:px-0">
                 <div className="">

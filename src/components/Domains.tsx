@@ -1,8 +1,9 @@
 import { CircleCheck } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Domains = () => {
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section className="py-[80px] lg:py-[80px] bg-white">
       <div className="max-w-[1920px] w-full mx-auto px-6 lg:px-12 2xl:px-[320px] grid justify-center items-center">
         {/* Header */}
         <div className="text-center mb-16">
@@ -20,7 +21,13 @@ const Domains = () => {
         <div className="max-w-[1364px] mx-auto flex flex-col gap-6 w-full items-center justify-center">
 
           {/* Card 1: Perfectly Plugged-In Payments - Image Left */}
-          <div className="bg-[#F8FAFC] rounded-[36px] border border-[#DBEDFF] overflow-hidden w-[1364px] flex items-center justify-center group">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0 }}
+            className="bg-[#F8FAFC] rounded-[36px] border border-[#DBEDFF] overflow-hidden w-[1364px] flex items-center justify-center group"
+          >
             <div className="flex gap-0 w-[1364px] pt-3 pb-3 pl-3 pr-3 rounded-[36px]">
               {/* Image */}
               <div className="relative h-[400px] lg:h-auto overflow-hidden rounded-[26px]">
@@ -74,10 +81,16 @@ const Domains = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 2: Always Secure, Always Ready - Image Right */}
-          <div className="bg-[#F8FAFC] rounded-[36px] border border-[#DBEDFF] overflow-hidden w-[1364px] flex items-center justify-center group">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-[#F8FAFC] rounded-[36px] border border-[#DBEDFF] overflow-hidden w-[1364px] flex items-center justify-center group"
+          >
             <div className="flex gap-0 w-[1364px] pt-3 pb-3 pl-3 pr-3 rounded-[36px]">
               {/* Content */}
               <div className="py-12 pl-[60px] pr-20 flex flex-col justify-center w-[752px] rounded-[26px]">
@@ -131,10 +144,16 @@ const Domains = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 3: Smart Payments, Smooth Journeys - Image Left */}
-          <div className="bg-[#F8FAFC] rounded-[36px] border border-[#DBEDFF] overflow-hidden w-[1364px] flex items-center justify-center group">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-[#F8FAFC] rounded-[36px] border border-[#DBEDFF] overflow-hidden w-[1364px] flex items-center justify-center group"
+          >
             <div className="flex gap-0 w-[1364px] pt-3 pb-3 pl-3 pr-3 rounded-[36px]">
               {/* Image */}
               <div className="relative h-[400px] lg:h-auto overflow-hidden rounded-[26px]">
@@ -188,7 +207,7 @@ const Domains = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
