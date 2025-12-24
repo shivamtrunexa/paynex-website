@@ -3,7 +3,7 @@ import { Linkedin, Twitter, Instagram, Facebook, Youtube } from "iconoir-react";
 
 const Footer = () => {
     return (
-        <footer className="self-stretch pt-[50px] pb-8 px-[320px] bg-gradient-to-b from-[#0F172C] to-[#102242] overflow-hidden flex flex-col justify-center items-center gap-20">
+        <footer className="self-stretch pt-[50px] pb-8 xl:px-[200px] 3xl:px-[320px] bg-gradient-to-b from-[#0F172C] to-[#102242] overflow-hidden flex flex-col justify-center items-center gap-20">
             <div className="self-stretch flex flex-col justify-start items-start gap-[70px]">
                 {/* Footer Content */}
                 <div className="self-stretch flex justify-between items-start">
@@ -20,7 +20,7 @@ const Footer = () => {
 
                             {/* Tagline */}
                             <p className="text-center text-[#F1F5F9] text-sm font-medium leading-5">
-                                Redefining Financial Interactions in a Connected World
+                                Redefining Financial Interactions
                             </p>
                         </div>
 

@@ -43,12 +43,12 @@ const Hero = () => {
   };
 
   return (
-    <section className="w-full min-h-screen bg-white px-6 lg:px-12 2xl:px-[100px] overflow-hidden flex items-center">
+    <section className="w-full min-h-screen bg-white px-6 lg:px-12 xl:px-16 3xl:px-[100px] overflow-hidden flex items-center">
       <div className="max-w-[1920px] mx-auto w-full">
         <div className="flex justify-between items-center gap-12">
           {/* Left Segment - Hero Content */}
           <motion.div
-            className="flex-1 max-w-[761px] h-[680px] flex flex-col justify-between items-start"
+            className="flex-1 xl:max-w-[580px] 3xl:max-w-[761px] xl:h-[580px] 3xl:h-[680px] flex flex-col justify-between items-start"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -57,7 +57,7 @@ const Hero = () => {
             <div className="w-full flex flex-col justify-start items-start py-9 gap-9">
               {/* Title */}
               <motion.div className="w-full" variants={itemVariants}>
-                <h1 className="leading-[1.1] text-[80px] font-medium tracking-normal text-[#272729]" style={{ fontFamily: 'Instrument Sans' }}>
+                <h1 className="leading-[1.1] xl:text-[60px] 3xl:text-[80px] font-medium tracking-normal text-[#272729]" style={{ fontFamily: 'Instrument Sans' }}>
                   Powering Future of
                   <br />
                   <span className="text-[#1876F4]" style={{ fontFamily: 'Syne' }}>Next-Gen</span> Payments
@@ -66,7 +66,7 @@ const Hero = () => {
 
               {/* Subtitle */}
               <motion.p
-                className="w-full text-[#45556C] text-xl leading-7"
+                className="w-full text-[#45556C] xl:text-base 3xl:text-xl xl:leading-6 3xl:leading-7"
                 variants={itemVariants}
               >
                 One secure, scalable platform to integrate, accept and
@@ -139,7 +139,7 @@ const Hero = () => {
 
           {/* Right Segment - Hero Image */}
           <motion.div
-            className="w-[700px] h-[680px] relative bg-[#F1F1F1] overflow-hidden rounded-[42px]"
+            className="xl:w-[520px] 3xl:w-[700px] xl:h-[580px] 3xl:h-[680px] relative bg-[#F1F1F1] overflow-hidden xl:rounded-[32px] 3xl:rounded-[42px] flex items-center justify-center"
             variants={imageVariants}
             initial="hidden"
             animate="visible"
@@ -147,7 +147,7 @@ const Hero = () => {
             <img
               src="/partners/Hero Image.png"
               alt="Payment Ecosystem"
-              className="w-[584px] h-[497px] absolute left-[58px] top-[92px] object-contain"
+              className="xl:w-[440px] 3xl:w-[584px] xl:h-[375px] 3xl:h-[497px] object-contain"
             />
           </motion.div>
         </div>
