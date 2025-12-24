@@ -14,6 +14,7 @@ export default {
         // },
         extend: {
             screens: {
+                'xl': '1440px',   // 90rem - for medium-large screens
                 '3xl': '1920px',  // 120rem
                 '4xl': '2560px',  // 160rem
                 '5xl': '3200px',  // 200rem
