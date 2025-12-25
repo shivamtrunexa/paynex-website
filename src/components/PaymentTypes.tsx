@@ -97,7 +97,7 @@ const PaymentTypes = () => {
 
     return (
         <section className="py-20 lg:py-[100px] bg-white">
-            <div className="max-w-[1920px] mx-auto px-6 lg:px-12 2xl:px-[320px]">
+            <div className="max-w-[1920px] mx-auto px-6 lg:px-12 3xl:px-[320px]">
                 {/* Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-[#272729] xl:text-[48px] 3xl:text-[60px] font-medium xl:leading-[56px] 3xl:leading-[72px] mb-4 flex justify-center items-center">
@@ -113,7 +113,7 @@ const PaymentTypes = () => {
                 </div>
 
                 {/* Payment Cards Grid */}
-                <div className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 xl:scale-95 3xl:scale-100">
+                <div className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                     {paymentMethods.map((method, index) => (
                         <PaymentCard
                             key={index}
