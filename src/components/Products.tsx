@@ -63,7 +63,7 @@ const Products = () => {
                     {products.map((product, index) => (
                         <div
                             key={index}
-                            className="xl:w-[400px] 3xl:w-[516px] xl:p-[38px] 3xl:p-[50px] bg-[#171717] hover:bg-[#25252E] xl:rounded-[26px] 3xl:rounded-[35px] border-2 border-[#3D3D4C] flex flex-col justify-start items-start xl:gap-7 3xl:gap-9 transition-colors duration-300 group"
+                            className="xl:w-[400px] xl:h-[580px] 3xl:w-[516px] 3xl:h-auto xl:p-[38px] 3xl:p-[50px] bg-[#171717] hover:bg-[#25252E] xl:rounded-[26px] 3xl:rounded-[35px] border-2 border-[#3D3D4C] flex flex-col justify-start items-start xl:gap-7 3xl:gap-9 transition-colors duration-300 group"
                         >
                             {/* Top Section */}
                             <div className="self-stretch flex flex-col justify-start items-start gap-6">
@@ -79,7 +79,7 @@ const Products = () => {
                                         <h3 className="text-white xl:text-[32px] 3xl:text-[42px] font-medium xl:leading-[40px] 3xl:leading-[52px]">
                                             {product.title}
                                         </h3>
-                                        <p className="self-stretch text-white xl:text-lg 3xl:text-xl font-medium xl:leading-[26px] 3xl:leading-8">
+                                        <p className="self-stretch text-white xl:text-lg 3xl:text-xl font-medium xl:leading-[26px] 3xl:leading-8 xl:min-h-[52px] 3xl:min-h-[32px]">
                                             {product.subtitle}
                                         </p>
                                     </div>
@@ -87,7 +87,7 @@ const Products = () => {
 
                                 {/* Description */}
                                 <div className="self-stretch flex justify-start items-center gap-2.5">
-                                    <p className="flex-1 text-[#EFEFEF] xl:text-base 3xl:text-base font-normal xl:leading-6 3xl:leading-7">
+                                    <p className="flex-1 text-[#EFEFEF] xl:text-base 3xl:text-base font-normal xl:leading-6 3xl:leading-7 xl:min-h-[96px] 3xl:min-h-[84px]">
                                         {product.description}
                                     </p>
                                 </div>
