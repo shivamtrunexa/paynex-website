@@ -127,7 +127,7 @@ const Hero = () => {
               </div>
 
               {/* Partners Logos */}
-              <div className="w-full opacity-80 flex justify-start items-center gap-8">
+              <div className="w-full opacity-80 flex justify-start items-center gap-8 xl:scale-90 3xl:scale-100 origin-left">
                 <img src="/partners/moneris.svg" alt="Moneris" className="h-8 object-contain transition-all" />
                 <img src="/partners/littlepay.svg" alt="littlepay" className="h-8 object-contain transition-all" />
                 <img src="/partners/idtech.svg" alt="IDTech" className="h-8 object-contain transition-all" />
