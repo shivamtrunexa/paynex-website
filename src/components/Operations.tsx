@@ -2,7 +2,7 @@ import { Archive, Lock, TicketSlash, TrendingUp } from "lucide-react";
 
 const Operations = () => {
     return (
-        <section className="w-full h-full px-6 lg:px-12 2xl:px-[320px] py-[80px] bg-[#F3F3F3] overflow-hidden flex flex-col justify-center items-center gap-[60px]">
+        <section className="w-full h-full px-6 lg:px-12 2xl:px-[164px] py-[80px] bg-[#F3F3F3] overflow-hidden flex flex-col justify-center items-center gap-[100px]">
             {/* Header Container */}
             <div className="w-full flex flex-col justify-start items-center gap-3">
                 {/* Heading 1 */}
@@ -14,7 +14,7 @@ const Operations = () => {
 
                 {/* Paragraph */}
                 <div className="w-full flex justify-center items-center gap-2.5">
-                    <p className="flex-1 text-center text-[#4A5565] xl:text-base 3xl:text-xl font-normal xl:leading-6 3xl:leading-7">
+                    <p className="flex-1 text-center text-[#4A5565] text-xl font-normal leading-7">
                         Comprehensive payment capabilities built for every business flow
                     </p>
                 </div>
