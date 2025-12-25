@@ -5,7 +5,9 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("about");
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
+    const [isScrolling, setIsScrolling] = useState(false);
     const navRef = useRef<HTMLDivElement>(null);
+    const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     const navLinks = [
         { label: "About", href: "#about" },
@@ -26,13 +28,25 @@ const Header = () => {
             const elementPosition = targetElement.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
+            // Set scrolling flag to disable observer updates
+            setIsScrolling(true);
+            setActiveSection(targetId);
+            setIsMenuOpen(false);
+
             window.scrollTo({
                 top: offsetPosition,
                 behavior: "smooth"
             });
 
-            setActiveSection(targetId);
-            setIsMenuOpen(false);
+            // Clear any existing timeout
+            if (scrollTimeoutRef.current) {
+                clearTimeout(scrollTimeoutRef.current);
+            }
+
+            // Re-enable observer after scroll completes (smooth scroll typically takes ~500-1000ms)
+            scrollTimeoutRef.current = setTimeout(() => {
+                setIsScrolling(false);
+            }, 1000);
         }
     };
 
@@ -47,6 +61,9 @@ const Header = () => {
         let currentSections: { id: string; ratio: number }[] = [];
 
         const observerCallback = (entries: IntersectionObserverEntry[]) => {
+            // Skip observer updates during manual scrolling
+            if (isScrolling) return;
+
             // Update the list of currently intersecting sections
             entries.forEach((entry) => {
                 const sectionId = entry.target.id;
@@ -89,8 +106,12 @@ const Header = () => {
         return () => {
             observer.disconnect();
             currentSections = [];
+            // Clear timeout on cleanup
+            if (scrollTimeoutRef.current) {
+                clearTimeout(scrollTimeoutRef.current);
+            }
         };
-    }, []);
+    }, [isScrolling]);
 
     // Update indicator position when active section changes
     useEffect(() => {
