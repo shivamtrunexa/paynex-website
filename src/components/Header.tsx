@@ -127,15 +127,15 @@ const Header = () => {
     }, [activeSection]);
 
     return (
-        <header className="w-full bg-white/90 fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-gray-100 px-6 lg:px-12 xl:px-16 3xl:px-[100px]">
+        <header className="w-full bg-white fixed top-0 left-0 right-0 z-50 px-6 py-5 lg:px-12 lg:py-0 xl:px-16 3xl:px-[100px] border-b border-[#ECECEC] lg:border-gray-100 lg:backdrop-blur-md lg:bg-white/95">
             <div className="max-w-[1920px] mx-auto w-full">
-                <div className="flex items-center justify-between h-20">
+                <div className="flex items-end lg:items-center justify-between lg:h-20">
                     {/* Logo Section */}
                     <a href="#" className="flex items-center">
                         <img
                             src="/paynex/paynex-logo.svg"
                             alt="PayneX"
-                            className="h-8"
+                            className="w-[90px] h-8 lg:h-8 lg:w-auto"
                             style={{ filter: 'brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(1049%) hue-rotate(202deg) brightness(95%) contrast(92%)' }}
                         />
                     </a>
@@ -168,27 +168,38 @@ const Header = () => {
                             </div>
                         </div>
                     </nav>
-                    {/* Mobile Menu Button */}
+                    {/* Mobile Menu Button - Hamburger Icon */}
                     <button
-                        className="lg:hidden p-2 text-gray-600 hover:text-gray-900"
+                        className="lg:hidden p-2 text-[#2a2d34] hover:text-gray-900 transition-colors"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-label="Toggle menu"
                     >
-                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        {isMenuOpen ? (
+                            <X size={24} strokeWidth={2} />
+                        ) : (
+                            <div className="flex flex-col gap-[5px]">
+                                <span className="w-6 h-[2px] bg-[#2a2d34] rounded-full"></span>
+                                <span className="w-6 h-[2px] bg-[#2a2d34] rounded-full"></span>
+                                <span className="w-6 h-[2px] bg-[#2a2d34] rounded-full"></span>
+                            </div>
+                        )}
                     </button>
                 </div>
-                {/* Mobile Navigation */}
-                {isMenuOpen && (
-                    <nav className="lg:hidden py-4 border-t border-gray-100">
-                        <div className="flex flex-col gap-4">
+                {/* Mobile Navigation - Slide down menu */}
+                <div
+                    className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+                        }`}
+                >
+                    <nav className="py-4 border-t border-gray-100">
+                        <div className="flex flex-col gap-2">
                             {navLinks.map((link) => (
                                 <a
                                     key={link.label}
                                     href={link.href}
                                     onClick={(e) => handleNavClick(e, link.href)}
-                                    className={`text-sm font-medium transition-colors py-2 ${activeSection === link.href.replace("#", "")
-                                        ? "text-gray-900"
-                                        : "text-gray-500"
+                                    className={`text-base font-medium transition-colors py-3 px-2 rounded-lg ${activeSection === link.href.replace("#", "")
+                                        ? "text-[#1876f4] bg-blue-50"
+                                        : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                                         }`}
                                 >
                                     {link.label}
@@ -196,7 +207,7 @@ const Header = () => {
                             ))}
                         </div>
                     </nav>
-                )}
+                </div>
             </div>
         </header>
     );
