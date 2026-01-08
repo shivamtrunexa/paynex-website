@@ -3,8 +3,186 @@ import { motion } from "framer-motion";
 
 const Domains = () => {
   return (
-    <section className="py-[80px] lg:py-[80px] bg-white">
-      <div className="max-w-[1920px] w-full mx-auto px-6 lg:px-12 2xl:px-[320px] grid justify-center items-center">
+    <section className="pt-20 pb-6 xl:py-[80px] bg-white">
+      {/* Mobile Layout */}
+      <div className="xl:hidden w-full px-7 flex flex-col justify-center items-center gap-[50px]">
+        {/* Header */}
+        <div className="w-full flex flex-col justify-start items-center gap-3">
+          <h2 className="text-center text-[40px] font-medium leading-[48px]">
+            <span className="text-[#272729]">Domains<br /></span>
+            <span className="text-[#1876F4] italic">We</span>
+            <span className="text-[#272729]"> Support</span>
+          </h2>
+          <p className="text-center text-[#45556C] text-base font-normal leading-6">
+            From EV charging and transit to retail and unattended systems-Paynex supports diverse, high-scale payment environments.
+          </p>
+        </div>
+
+        {/* Cards Container */}
+        <div className="w-full flex flex-col justify-center items-start gap-5">
+          {/* Card 1: EV Charging Solution */}
+          <div className="w-full pt-3 pb-7 px-3 bg-[#F8FAFC] rounded-3xl border border-[#DBEDFF] flex flex-col justify-start items-start gap-7">
+            {/* Image */}
+            <div className="w-full h-[248px] overflow-hidden rounded-[14px]">
+              <img
+                src="/domains/1.png"
+                alt="EV Charging Payment"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Content */}
+            <div className="w-full px-4 flex flex-col justify-center items-start gap-9">
+              {/* Title Section */}
+              <div className="w-full flex flex-col justify-start items-start gap-6">
+                {/* Badge */}
+                <div className="px-3 py-2 bg-[#DAEDE2] rounded-[20px] flex justify-center items-center">
+                  <span className="text-[#30A54E] text-sm font-medium leading-5">EV Charging Solution</span>
+                </div>
+                {/* Title */}
+                <h3 className="text-[#272729] text-[32px] font-medium leading-10">
+                  Perfectly Plugged-In <br />Payments
+                </h3>
+              </div>
+              {/* Features */}
+              <div className="w-full flex flex-col justify-start items-start gap-5">
+                <div className="w-full flex justify-start items-start gap-2">
+                  <div className="pt-0.5">
+                    <CircleCheck className="w-5 h-5 text-[#30A54E]" strokeWidth={1.5} />
+                  </div>
+                  <p className="flex-1 text-[#45556C] text-base font-normal leading-6">
+                    Pre-Authorization Flow – Secure pre-auth before charging ensures valid payment and automatic settlement post-session.
+                  </p>
+                </div>
+                <div className="w-full flex justify-start items-start gap-2">
+                  <div className="pt-0.5">
+                    <CircleCheck className="w-5 h-5 text-[#30A54E]" strokeWidth={1.5} />
+                  </div>
+                  <p className="flex-1 text-[#45556C] text-base font-normal leading-6">
+                    Retail Purchase Mode – Fixed or time-based retail transactions for public and commercial chargers.
+                  </p>
+                </div>
+                <div className="w-full flex justify-start items-start gap-2">
+                  <div className="pt-0.5">
+                    <CircleCheck className="w-5 h-5 text-[#30A54E]" strokeWidth={1.5} />
+                  </div>
+                  <p className="flex-1 text-[#45556C] text-base font-normal leading-6">
+                    Offline & Deferred Payments – Reliable operation even without network, with auto-sync and deferred transaction settlement.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Unattended Payments */}
+          <div className="w-full pt-3 pb-7 px-3 bg-[#F8FAFC] rounded-3xl border border-[#DBEDFF] flex flex-col justify-start items-start gap-7">
+            {/* Image */}
+            <div className="w-full h-[248px] overflow-hidden rounded-[14px]">
+              <img
+                src="/domains/2.png"
+                alt="Unattended Payment Terminal"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Content */}
+            <div className="w-full px-4 flex flex-col justify-center items-start gap-9">
+              {/* Title Section */}
+              <div className="w-full flex flex-col justify-start items-start gap-6">
+                {/* Badge */}
+                <div className="px-3 py-2 bg-[#EDDFFC] rounded-[20px] flex justify-center items-center">
+                  <span className="text-[#AD46FF] text-sm font-medium leading-5">Unattended Payments</span>
+                </div>
+                {/* Title */}
+                <h3 className="text-[#272729] text-[32px] font-medium leading-10">
+                  Always Secure, Always<br />Ready
+                </h3>
+              </div>
+              {/* Features */}
+              <div className="w-full flex flex-col justify-start items-start gap-5">
+                <div className="w-full flex justify-start items-start gap-2">
+                  <div className="pt-0.5">
+                    <CircleCheck className="w-5 h-5 text-[#30A54E]" strokeWidth={1.5} />
+                  </div>
+                  <p className="flex-1 text-[#45556C] text-base font-normal leading-6">
+                    Unified Tokenization - Enables secure, consistent payment credentials across all unattended touchpoints.
+                  </p>
+                </div>
+                <div className="w-full flex justify-start items-start gap-2">
+                  <div className="pt-0.5">
+                    <CircleCheck className="w-5 h-5 text-[#30A54E]" strokeWidth={1.5} />
+                  </div>
+                  <p className="flex-1 text-[#45556C] text-base font-normal leading-6">
+                    Single Data Platform - Consolidates transactions, analytics, and merchant control in one seamless dashboard.
+                  </p>
+                </div>
+                <div className="w-full flex justify-start items-start gap-2">
+                  <div className="pt-0.5">
+                    <CircleCheck className="w-5 h-5 text-[#30A54E]" strokeWidth={1.5} />
+                  </div>
+                  <p className="flex-1 text-[#45556C] text-base font-normal leading-6">
+                    Advanced Fraud Control - AI-driven risk engine ensures real-time detection and prevention of suspicious activity.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3: Mass Transit Solution */}
+          <div className="w-full pt-3 pb-7 px-3 bg-[#F8FAFC] rounded-3xl border border-[#DBEDFF] flex flex-col justify-start items-start gap-7">
+            {/* Image */}
+            <div className="w-full h-[248px] overflow-hidden rounded-[14px]">
+              <img
+                src="/domains/3.png"
+                alt="Transit Payment Terminal"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Content */}
+            <div className="w-full px-4 flex flex-col justify-center items-start gap-9">
+              {/* Title Section */}
+              <div className="w-full flex flex-col justify-start items-start gap-6">
+                {/* Badge */}
+                <div className="px-3 py-2 bg-[#D6E6FB] rounded-[20px] flex justify-center items-center">
+                  <span className="text-[#1876F5] text-sm font-medium leading-5">Mass Transit Solution</span>
+                </div>
+                {/* Title */}
+                <h3 className="text-[#272729] text-[32px] font-medium leading-10">
+                  Smart Payments, <br />Smooth Journeys
+                </h3>
+              </div>
+              {/* Features */}
+              <div className="w-full flex flex-col justify-start items-start gap-5">
+                <div className="w-full flex justify-start items-start gap-2">
+                  <div className="pt-0.5">
+                    <CircleCheck className="w-5 h-5 text-[#30A54E]" strokeWidth={1.5} />
+                  </div>
+                  <p className="flex-1 text-[#45556C] text-base font-normal leading-6">
+                    Real-Time Payment Processing - Enables instant validation, settlement, and reconciliation for high-volume transit transactions.
+                  </p>
+                </div>
+                <div className="w-full flex justify-start items-start gap-2">
+                  <div className="pt-0.5">
+                    <CircleCheck className="w-5 h-5 text-[#30A54E]" strokeWidth={1.5} />
+                  </div>
+                  <p className="flex-1 text-[#45556C] text-base font-normal leading-6">
+                    Seamless integration with validators and back-office systems, connecting on-board devices and gates for complete visibility and control.
+                  </p>
+                </div>
+                <div className="w-full flex justify-start items-start gap-2">
+                  <div className="pt-0.5">
+                    <CircleCheck className="w-5 h-5 text-[#30A54E]" strokeWidth={1.5} />
+                  </div>
+                  <p className="flex-1 text-[#45556C] text-base font-normal leading-6">
+                    Deferred & Offline Transaction Support - Ensures uninterrupted operations in low-connectivity areas, with automatic sync and settlement once online.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden xl:block max-w-[1920px] w-full mx-auto px-6 lg:px-12 2xl:px-[320px]">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-[#272729] xl:text-[48px] 3xl:text-[60px] font-medium xl:leading-[56px] 3xl:leading-[72px] mb-4 flex justify-center items-center">
@@ -216,3 +394,4 @@ const Domains = () => {
 };
 
 export default Domains;
+

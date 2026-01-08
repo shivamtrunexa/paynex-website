@@ -98,9 +98,11 @@
         @apply border-border;
     }
 
+    html,
     body {
         @apply bg-background text-foreground font-sans antialiased;
         font-family: 'Instrument Sans', sans-serif;
+        overflow-x: hidden;
     }
 }
 

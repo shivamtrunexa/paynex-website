@@ -1,9 +1,93 @@
-import { Plus, Cpu, Zap, Grid3x3, Banknote, Network } from "lucide-react";
+import { Banknote, Cpu, Zap, Network } from "lucide-react";
 
 const Freedom = () => {
     return (
-        <section className="py-20 lg:py-[100px] bg-[#F3F3F3]">
-            <div className="max-w-[1920px] mx-auto px-6 lg:px-12 xl:px-[200px] 3xl:px-[320px]">
+        <section className="py-[50px] xl:py-[100px] bg-[#F3F3F3]">
+            {/* Mobile Layout */}
+            <div className="xl:hidden w-full px-7 flex flex-col justify-center items-center gap-20">
+                {/* Cards Container */}
+                <div className="w-full flex flex-col justify-start items-start gap-6">
+                    {/* First Card - Freedom in Payment Choices */}
+                    <div className="w-full pt-3 pb-7 px-3 bg-white rounded-3xl border border-[#45556C]/10 flex flex-col justify-start items-start gap-6">
+                        {/* Image */}
+                        <img
+                            src="/payment-choices/keyboard.png"
+                            alt="Payment Choices"
+                            className="w-full h-auto rounded-[14px] object-cover"
+                        />
+                        {/* Content */}
+                        <div className="w-full px-4 flex flex-col justify-start items-start gap-4">
+                            {/* Icon */}
+                            <Banknote className="w-9 h-9 text-[#1876F4]" strokeWidth={1.7} />
+                            {/* Title */}
+                            <h2 className="w-full text-[#272729] text-[32px] font-medium leading-10">
+                                Freedom in<br />Payment Choices
+                            </h2>
+                            {/* Description */}
+                            <p className="w-full text-[#45556C] text-lg font-normal leading-6">
+                                Build your payment ecosystem<br />your way
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Second Card - Hardware-Agnostic */}
+                    <div className="w-full p-7 bg-white rounded-3xl border border-[#45556C]/10 flex flex-col justify-start items-start gap-6">
+                        {/* Icon */}
+                        <Cpu className="w-9 h-9 text-[#1876F4]" strokeWidth={1.7} />
+                        {/* Content */}
+                        <div className="w-full flex flex-col justify-center items-start gap-3">
+                            {/* Title */}
+                            <h3 className="w-full text-[28px] font-medium leading-9">
+                                <span className="text-[#272729]">Hardware-</span>
+                                <span className="text-[#1876F4] italic">Agnostic</span>
+                            </h3>
+                            {/* Description */}
+                            <p className="w-full text-[#4A5565] text-base font-normal leading-6">
+                                Deploy instantly across existing setup. Our flexibility ensures seamless compatibility with any payment hardware.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Third Card - Acquirer-Independent */}
+                    <div className="w-full p-7 bg-white rounded-3xl border border-[#45556C]/10 flex flex-col justify-start items-start gap-6">
+                        {/* Icon */}
+                        <Zap className="w-9 h-9 text-[#1876F4]" strokeWidth={1.7} />
+                        {/* Content */}
+                        <div className="w-full flex flex-col justify-center items-start gap-3">
+                            {/* Title */}
+                            <h3 className="w-full text-[28px] font-medium leading-9">
+                                <span className="text-[#272729]">Acquirer-</span>
+                                <span className="text-[#1876F4] italic">Independent</span>
+                            </h3>
+                            {/* Description */}
+                            <p className="w-full text-[#4A5565] text-base font-normal leading-6">
+                                Easily integrate and switch between multiple bank acquirers to maximise your savings & ensure transaction redundancy.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Fourth Card - Omni-channel Ready */}
+                    <div className="w-full p-7 bg-white rounded-3xl border border-[#45556C]/10 flex flex-col justify-start items-start gap-6">
+                        {/* Icon */}
+                        <Network className="w-9 h-9 text-[#1876F4]" strokeWidth={1.7} />
+                        {/* Content */}
+                        <div className="w-full flex flex-col justify-center items-start gap-3">
+                            {/* Title */}
+                            <h3 className="w-full text-[28px] font-medium leading-9">
+                                <span className="text-[#1876F4] italic">Omni-channel </span>
+                                <span className="text-[#272729]">Ready</span>
+                            </h3>
+                            {/* Description */}
+                            <p className="w-full text-[#4A5565] text-base font-normal leading-6">
+                                Consolidate all physical, online & mobile payments into one central platform to future-proof your business operations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Desktop Layout */}
+            <div className="hidden xl:block max-w-[1920px] mx-auto px-6 lg:px-12 xl:px-[200px] 3xl:px-[320px]">
                 {/* Grid Container - 3 columns */}
                 <div className="xl:w-[1152px] 3xl:w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
 
@@ -101,3 +185,4 @@ const Freedom = () => {
 };
 
 export default Freedom;
+

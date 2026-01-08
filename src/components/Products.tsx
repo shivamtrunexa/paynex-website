@@ -41,8 +41,90 @@ const Products = () => {
     ];
 
     return (
-        <section className="w-full p-6 flex flex-col justify-center items-center gap-[80px]">
-            <div className="w-full pt-20 pb-[100px] xl:px-[75px] 3xl:px-[100px] bg-[#171717] xl:rounded-[24px] 3xl:rounded-[32px] flex flex-col justify-center items-center gap-[80px]">
+        <section className="w-full pt-[50px] xl:pt-0 xl:p-6 flex flex-col justify-center items-center xl:gap-[80px]">
+            {/* Mobile Layout */}
+            <div className="xl:hidden w-full px-5 py-16 bg-[#171717] flex flex-col justify-start items-center gap-[50px]">
+                {/* Header */}
+                <div className="flex flex-col justify-start items-center gap-3">
+                    <h2 className="text-center text-[40px] font-medium leading-[48px]">
+                        <span className="text-white">Our </span>
+                        <span className="text-[#1876F4] italic">Products</span>
+                    </h2>
+                    <p className="text-center text-[#EFEFEF] text-base font-normal leading-6">
+                        A seamless flow from customer to bank
+                    </p>
+                </div>
+
+                {/* Product Cards */}
+                <div className="w-full flex flex-col justify-center items-center gap-9">
+                    {products.map((product, index) => (
+                        <div
+                            key={index}
+                            className="w-full p-7 bg-[#171717] rounded-3xl border-2 border-[#3D3D4C] flex flex-col justify-start items-start gap-9"
+                        >
+                            {/* Top Section */}
+                            <div className="w-full flex flex-col justify-start items-start gap-6">
+                                {/* Icon, Title, Subtitle */}
+                                <div className="w-full flex flex-col justify-center items-start gap-4">
+                                    {/* Icon */}
+                                    <div className="w-9 h-9 flex justify-center items-center">
+                                        <img src={product.icon} alt={`${product.title} icon`} className="w-9 h-9" />
+                                    </div>
+
+                                    {/* Title & Subtitle */}
+                                    <div className="w-full flex flex-col justify-start items-start gap-2">
+                                        <h3 className="text-white text-[36px] font-medium leading-[46px]">
+                                            {product.title}
+                                        </h3>
+                                        <p className="w-full text-white text-lg font-medium leading-7">
+                                            {product.subtitle}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Description */}
+                                <div className="w-full flex justify-start items-center gap-2.5">
+                                    <p className="flex-1 text-[#EFEFEF] text-base font-normal leading-6">
+                                        {product.description}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Key Highlights Section */}
+                            <div className="w-full flex flex-col justify-start items-start gap-5">
+                                {/* Key Highlights Header */}
+                                <div className="w-full flex justify-start items-center gap-2.5">
+                                    <h4 className="text-white text-xl font-medium leading-7">
+                                        Key Highlights
+                                    </h4>
+                                </div>
+
+                                {/* Highlights List */}
+                                <div className="w-full flex flex-col justify-start items-start gap-5">
+                                    {product.highlights.map((highlight, idx) => (
+                                        <div key={idx} className="w-full flex justify-start items-start gap-2">
+                                            {/* Checkmark Icon */}
+                                            <div className="pt-0.5 flex justify-start items-center gap-2.5">
+                                                <CircleCheck className="w-5 h-5 text-[#30A54E]" strokeWidth={1.5} />
+                                            </div>
+
+                                            {/* Highlight Text */}
+                                            <div className="flex-1 flex justify-center items-center gap-2.5">
+                                                <p className="flex-1 text-[#EFEFEF] text-base font-normal leading-6">
+                                                    {highlight}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Desktop Layout */}
+            <div className="hidden xl:flex w-full pt-20 pb-[100px] xl:px-[75px] 3xl:px-[100px] bg-[#171717] xl:rounded-[24px] 3xl:rounded-[32px] flex-col justify-center items-center gap-[80px]">
                 {/* Header */}
                 <div className="self-stretch flex flex-col justify-start items-center gap-3">
                     <div className="self-stretch flex justify-center items-center gap-2.5">
@@ -132,3 +214,4 @@ const Products = () => {
 };
 
 export default Products;
+
