@@ -1,4 +1,99 @@
 import { CircleCheck } from "lucide-react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
+// Animated Product Card component for mobile scroll-triggered background color
+const AnimatedProductCard = ({
+    product,
+    index
+}: {
+    product: {
+        icon: string;
+        title: string;
+        subtitle: string;
+        description: string;
+        highlights: string[]
+    };
+    index: number
+}) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, {
+        once: false,
+        margin: "-40% 0px -40% 0px"
+    });
+
+    return (
+        <motion.div
+            ref={ref}
+            key={index}
+            className="w-full p-7 rounded-3xl border-2 border-[#3D3D4C] flex flex-col justify-start items-start gap-9"
+            animate={{
+                backgroundColor: isInView ? "#25252E" : "#171717"
+            }}
+            transition={{
+                duration: 0.4,
+                ease: "easeOut"
+            }}
+        >
+            {/* Top Section */}
+            <div className="w-full flex flex-col justify-start items-start gap-6">
+                {/* Icon, Title, Subtitle */}
+                <div className="w-full flex flex-col justify-center items-start gap-4">
+                    {/* Icon */}
+                    <div className="w-9 h-9 flex justify-center items-center">
+                        <img src={product.icon} alt={`${product.title} icon`} className="w-9 h-9" />
+                    </div>
+
+                    {/* Title & Subtitle */}
+                    <div className="w-full flex flex-col justify-start items-start gap-2">
+                        <h3 className="text-white text-[36px] font-medium leading-[46px]">
+                            {product.title}
+                        </h3>
+                        <p className="w-full text-white text-lg font-medium leading-7">
+                            {product.subtitle}
+                        </p>
+                    </div>
+                </div>
+
+                {/* Description */}
+                <div className="w-full flex justify-start items-center gap-2.5">
+                    <p className="flex-1 text-[#EFEFEF] text-base font-normal leading-6">
+                        {product.description}
+                    </p>
+                </div>
+            </div>
+
+            {/* Key Highlights Section */}
+            <div className="w-full flex flex-col justify-start items-start gap-5">
+                {/* Key Highlights Header */}
+                <div className="w-full flex justify-start items-center gap-2.5">
+                    <h4 className="text-white text-xl font-medium leading-7">
+                        Key Highlights
+                    </h4>
+                </div>
+
+                {/* Highlights List */}
+                <div className="w-full flex flex-col justify-start items-start gap-5">
+                    {product.highlights.map((highlight, idx) => (
+                        <div key={idx} className="w-full flex justify-start items-start gap-2">
+                            {/* Checkmark Icon */}
+                            <div className="pt-0.5 flex justify-start items-center gap-2.5">
+                                <CircleCheck className="w-5 h-5 text-[#30A54E]" strokeWidth={1.5} />
+                            </div>
+
+                            {/* Highlight Text */}
+                            <div className="flex-1 flex justify-center items-center gap-2.5">
+                                <p className="flex-1 text-[#EFEFEF] text-base font-normal leading-6">
+                                    {highlight}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </motion.div>
+    );
+};
 
 const Products = () => {
     const products = [
@@ -58,67 +153,7 @@ const Products = () => {
                 {/* Product Cards */}
                 <div className="w-full flex flex-col justify-center items-center gap-9">
                     {products.map((product, index) => (
-                        <div
-                            key={index}
-                            className="w-full p-7 bg-[#171717] rounded-3xl border-2 border-[#3D3D4C] flex flex-col justify-start items-start gap-9"
-                        >
-                            {/* Top Section */}
-                            <div className="w-full flex flex-col justify-start items-start gap-6">
-                                {/* Icon, Title, Subtitle */}
-                                <div className="w-full flex flex-col justify-center items-start gap-4">
-                                    {/* Icon */}
-                                    <div className="w-9 h-9 flex justify-center items-center">
-                                        <img src={product.icon} alt={`${product.title} icon`} className="w-9 h-9" />
-                                    </div>
-
-                                    {/* Title & Subtitle */}
-                                    <div className="w-full flex flex-col justify-start items-start gap-2">
-                                        <h3 className="text-white text-[36px] font-medium leading-[46px]">
-                                            {product.title}
-                                        </h3>
-                                        <p className="w-full text-white text-lg font-medium leading-7">
-                                            {product.subtitle}
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* Description */}
-                                <div className="w-full flex justify-start items-center gap-2.5">
-                                    <p className="flex-1 text-[#EFEFEF] text-base font-normal leading-6">
-                                        {product.description}
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Key Highlights Section */}
-                            <div className="w-full flex flex-col justify-start items-start gap-5">
-                                {/* Key Highlights Header */}
-                                <div className="w-full flex justify-start items-center gap-2.5">
-                                    <h4 className="text-white text-xl font-medium leading-7">
-                                        Key Highlights
-                                    </h4>
-                                </div>
-
-                                {/* Highlights List */}
-                                <div className="w-full flex flex-col justify-start items-start gap-5">
-                                    {product.highlights.map((highlight, idx) => (
-                                        <div key={idx} className="w-full flex justify-start items-start gap-2">
-                                            {/* Checkmark Icon */}
-                                            <div className="pt-0.5 flex justify-start items-center gap-2.5">
-                                                <CircleCheck className="w-5 h-5 text-[#30A54E]" strokeWidth={1.5} />
-                                            </div>
-
-                                            {/* Highlight Text */}
-                                            <div className="flex-1 flex justify-center items-center gap-2.5">
-                                                <p className="flex-1 text-[#EFEFEF] text-base font-normal leading-6">
-                                                    {highlight}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+                        <AnimatedProductCard key={index} product={product} index={index} />
                     ))}
                 </div>
             </div>
