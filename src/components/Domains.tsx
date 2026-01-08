@@ -1,11 +1,38 @@
 import { CircleCheck } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
+// Animated Image component for mobile scroll-triggered scale
+const AnimatedImage = ({ src, alt }: { src: string; alt: string }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: false,
+    margin: "-40% 0px -40% 0px"
+  });
+
+  return (
+    <div ref={ref} className="w-full h-[248px] overflow-hidden rounded-[14px]">
+      <motion.img
+        src={src}
+        alt={alt}
+        className="w-full h-full object-cover"
+        animate={{
+          scale: isInView ? 1.1 : 1
+        }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut"
+        }}
+      />
+    </div>
+  );
+};
 
 const Domains = () => {
   return (
     <section className="pt-20 pb-6 xl:py-[80px] bg-white">
       {/* Mobile Layout */}
-      <div className="xl:hidden w-full px-7 flex flex-col justify-center items-center gap-[50px]">
+      <div className="xl:hidden w-full px-6  flex flex-col justify-center items-center gap-[50px]">
         {/* Header */}
         <div className="w-full flex flex-col justify-start items-center gap-3">
           <h2 className="text-center text-[40px] font-medium leading-[48px]">
@@ -22,14 +49,8 @@ const Domains = () => {
         <div className="w-full flex flex-col justify-center items-start gap-5">
           {/* Card 1: EV Charging Solution */}
           <div className="w-full pt-3 pb-7 px-3 bg-[#F8FAFC] rounded-3xl border border-[#DBEDFF] flex flex-col justify-start items-start gap-7">
-            {/* Image */}
-            <div className="w-full h-[248px] overflow-hidden rounded-[14px]">
-              <img
-                src="/domains/1.png"
-                alt="EV Charging Payment"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            {/* Image with scale animation */}
+            <AnimatedImage src="/domains/1.png" alt="EV Charging Payment" />
             {/* Content */}
             <div className="w-full px-4 flex flex-col justify-center items-start gap-9">
               {/* Title Section */}
@@ -75,14 +96,8 @@ const Domains = () => {
 
           {/* Card 2: Unattended Payments */}
           <div className="w-full pt-3 pb-7 px-3 bg-[#F8FAFC] rounded-3xl border border-[#DBEDFF] flex flex-col justify-start items-start gap-7">
-            {/* Image */}
-            <div className="w-full h-[248px] overflow-hidden rounded-[14px]">
-              <img
-                src="/domains/2.png"
-                alt="Unattended Payment Terminal"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            {/* Image with scale animation */}
+            <AnimatedImage src="/domains/2.png" alt="Unattended Payment Terminal" />
             {/* Content */}
             <div className="w-full px-4 flex flex-col justify-center items-start gap-9">
               {/* Title Section */}
@@ -128,14 +143,8 @@ const Domains = () => {
 
           {/* Card 3: Mass Transit Solution */}
           <div className="w-full pt-3 pb-7 px-3 bg-[#F8FAFC] rounded-3xl border border-[#DBEDFF] flex flex-col justify-start items-start gap-7">
-            {/* Image */}
-            <div className="w-full h-[248px] overflow-hidden rounded-[14px]">
-              <img
-                src="/domains/3.png"
-                alt="Transit Payment Terminal"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            {/* Image with scale animation */}
+            <AnimatedImage src="/domains/3.png" alt="Transit Payment Terminal" />
             {/* Content */}
             <div className="w-full px-4 flex flex-col justify-center items-start gap-9">
               {/* Title Section */}
