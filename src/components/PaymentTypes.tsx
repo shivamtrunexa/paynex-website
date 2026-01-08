@@ -127,7 +127,7 @@ const PaymentTypes = () => {
     return (
         <section className="w-full py-20 xl:py-[100px] bg-white">
             {/* Mobile Layout */}
-            <div className="xl:hidden w-full px-8 flex flex-col justify-start items-center gap-[50px]">
+            <div className="xl:hidden w-full px-7 flex flex-col justify-start items-center gap-[50px]">
                 {/* Header */}
                 <div className="w-full flex flex-col justify-start items-center gap-3">
                     <h2 className="text-center text-[40px] font-medium leading-[48px]">

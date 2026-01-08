@@ -34,7 +34,7 @@ const Philosophy = () => {
     return (
         <section ref={sectionRef} className="w-full h-full bg-white overflow-hidden">
             {/* Mobile Layout */}
-            <div className="xl:hidden w-full px-8 py-20 flex flex-col justify-center items-center gap-[50px]">
+            <div className="xl:hidden w-full px-7 py-20 flex flex-col justify-center items-center gap-[50px]">
                 {/* Design Philosophy Section - Title */}
                 <div className="w-full flex flex-col justify-center items-start gap-6">
                     <div className="w-full flex flex-col justify-start items-start gap-3">

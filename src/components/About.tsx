@@ -2,7 +2,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full pt-20 lg:py-[80px] px-8 lg:px-12 2xl:px-[320px] bg-white flex flex-col justify-center items-center gap-[50px] lg:gap-[60px] xl:gap-[60px] 3xl:gap-[100px]"
+      className="w-full pt-20 lg:py-[80px] px-7 lg:px-12 2xl:px-[320px] bg-white flex flex-col justify-center items-center gap-[50px] lg:gap-[60px] xl:gap-[60px] 3xl:gap-[100px]"
     >
       {/* Header Container */}
       <div className="w-full flex flex-col justify-start items-center gap-3">

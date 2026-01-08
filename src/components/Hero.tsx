@@ -58,7 +58,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="w-full min-h-screen bg-white pt-[72px] lg:pt-0 px-8 lg:px-12 xl:px-16 3xl:px-[100px] overflow-x-hidden overflow-y-visible flex items-start lg:items-center">
+    <section className="w-full min-h-screen bg-white pt-[72px] lg:pt-0 px-7 lg:px-12 xl:px-16 3xl:px-[100px] overflow-x-hidden overflow-y-visible flex items-start lg:items-center">
       <div className="max-w-[1920px] mx-auto w-full overflow-x-hidden">
         {/* Mobile: vertical flex-col layout with 50px gap | Desktop: horizontal layout */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-[50px] lg:gap-12 pt-[50px] lg:pt-0">

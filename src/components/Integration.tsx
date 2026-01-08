@@ -1,6 +1,6 @@
 const Integration = () => {
     return (
-        <section className="w-full h-full pt-20 px-8 xl:px-[200px] 3xl:px-[320px] xl:py-[80px] flex flex-col justify-start xl:justify-center items-start xl:items-center gap-[50px] xl:gap-[100px]">
+        <section className="w-full h-full pt-20 px-7 xl:px-[200px] 3xl:px-[320px] xl:py-[80px] flex flex-col justify-start xl:justify-center items-start xl:items-center gap-[50px] xl:gap-[100px]">
             {/* Header Container */}
             <div className="w-full xl:w-[1152px] 3xl:max-w-none 3xl:w-[1280px] mx-auto flex flex-col justify-start items-start gap-4">
                 <div className="flex flex-col justify-start items-start gap-3">
