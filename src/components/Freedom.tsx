@@ -1,6 +1,14 @@
 import { Banknote, Cpu, Zap, Network } from "lucide-react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Freedom = () => {
+    const imageRef = useRef(null);
+    const isInView = useInView(imageRef, {
+        once: false,
+        margin: "-40% 0px -40% 0px" // Triggers when element is in center of viewport
+    });
+
     return (
         <section className="py-[50px] xl:py-[100px] bg-[#F3F3F3]">
             {/* Mobile Layout */}
@@ -9,12 +17,21 @@ const Freedom = () => {
                 <div className="w-full flex flex-col justify-start items-start gap-6">
                     {/* First Card - Freedom in Payment Choices */}
                     <div className="w-full pt-3 pb-7 px-3 bg-white rounded-3xl border border-[#45556C]/10 flex flex-col justify-start items-start gap-6">
-                        {/* Image */}
-                        <img
-                            src="/payment-choices/keyboard.png"
-                            alt="Payment Choices"
-                            className="w-full h-auto rounded-[14px] object-cover"
-                        />
+                        {/* Image with scale animation */}
+                        <div ref={imageRef} className="w-full overflow-hidden rounded-[14px]">
+                            <motion.img
+                                src="/payment-choices/keyboard.png"
+                                alt="Payment Choices"
+                                className="w-full h-auto rounded-[14px] object-cover"
+                                animate={{
+                                    scale: isInView ? 1.1 : 1
+                                }}
+                                transition={{
+                                    duration: 0.5,
+                                    ease: "easeOut"
+                                }}
+                            />
+                        </div>
                         {/* Content */}
                         <div className="w-full px-4 flex flex-col justify-start items-start gap-4">
                             {/* Icon */}
