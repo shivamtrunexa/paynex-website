@@ -80,7 +80,7 @@ const Integration = () => {
                 <div className="w-full xl:px-9 3xl:px-12 xl:py-[52px] 3xl:py-[70px] bg-[#1876F4] xl:rounded-[22px] 3xl:rounded-[28px] flex justify-between items-center">
                     <div className="flex flex-col justify-start items-start gap-2.5">
                         <h3 className="text-white xl:text-[34px] 3xl:text-[42px] font-medium xl:leading-[42px] 3xl:leading-[52px]">
-                            PPayment Orchestration Platform
+                            Payment Orchestration Platform
                         </h3>
                     </div>
                     <div className="flex justify-center items-center gap-2.5">
