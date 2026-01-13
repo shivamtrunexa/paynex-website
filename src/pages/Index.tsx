@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import HowItWorks from "@/components/HowItWorks";
 import Philosophy from "@/components/Philosophy";
-import Operations from "@/components/Operations";
+// import Operations from "@/components/Operations";
 import Integration from "@/components/Integration";
 import PaymentTypes from "@/components/PaymentTypes";
 import Freedom from "@/components/Freedom";
@@ -21,7 +21,9 @@ const Index = () => {
         <Header />
         <main>
           {/* Hero section - Has internal staggered animations */}
-          <Hero />
+          <div id="home">
+            <Hero />
+          </div>
 
           {/* About section - Slide up */}
           <div id="about">
@@ -40,12 +42,12 @@ const Index = () => {
             <Philosophy />
           </RevealSection>
 
-          {/* Operations - Slide up */}
-          <div id="operations">
+          {/* Operations - Slide up (Hidden) */}
+          {/* <div id="operations">
             <RevealSection direction="up" delay={0.1}>
               <Operations />
             </RevealSection>
-          </div>
+          </div> */}
 
           {/* Integration - Slide up */}
           <RevealSection direction="up" delay={0.1}>

@@ -10,9 +10,9 @@ const Freedom = () => {
     });
 
     return (
-        <section className="py-[50px] xl:py-[100px] bg-[#F3F3F3]">
+        <section className="py-[50px] md:py-[60px] lg:py-[80px] xl:py-[100px] bg-[#F3F3F3]">
             {/* Mobile Layout */}
-            <div className="xl:hidden w-full px-7 flex flex-col justify-center items-center gap-20">
+            <div className="md:hidden w-full px-7 flex flex-col justify-center items-center gap-20">
                 {/* Cards Container */}
                 <div className="w-full flex flex-col justify-start items-start gap-6">
                     {/* First Card - Freedom in Payment Choices */}
@@ -48,71 +48,50 @@ const Freedom = () => {
                     </div>
 
                     {/* Second Card - Hardware-Agnostic */}
-                    <div className="w-full p-7 bg-white rounded-3xl border border-[#45556C]/10 flex flex-col justify-start items-start gap-6">
+                    <div className="w-full p-9 bg-white rounded-[24px] border-[1.5px] border-[#45556C]/10 flex flex-col justify-start items-start gap-8">
                         {/* Icon */}
-                        <Cpu className="w-9 h-9 text-[#1876F4]" strokeWidth={1.7} />
-                        {/* Content */}
-                        <div className="w-full flex flex-col justify-center items-start gap-3">
-                            {/* Title */}
-                            <h3 className="w-full text-[28px] font-medium leading-9">
-                                <span className="text-[#272729]">Hardware-</span>
-                                <span className="text-[#1876F4] italic">Agnostic</span>
-                            </h3>
-                            {/* Description */}
-                            <p className="w-full text-[#4A5565] text-base font-normal leading-6">
-                                Deploy instantly across existing setup. Our flexibility ensures seamless compatibility with any payment hardware.
-                            </p>
-                        </div>
+                        <Cpu className="w-8 h-8 text-[#1876F4]" strokeWidth={1.7} />
+                        {/* Title */}
+                        <h3 className="w-full text-[28px] font-medium leading-9">
+                            <span className="text-[#272729]">Hardware-</span>
+                            <span className="text-[#1876F4] italic">Agnostic</span>
+                        </h3>
                     </div>
 
                     {/* Third Card - Acquirer-Independent */}
-                    <div className="w-full p-7 bg-white rounded-3xl border border-[#45556C]/10 flex flex-col justify-start items-start gap-6">
+                    <div className="w-full p-9 bg-white rounded-[24px] border-[1.5px] border-[#45556C]/10 flex flex-col justify-start items-start gap-8">
                         {/* Icon */}
-                        <Zap className="w-9 h-9 text-[#1876F4]" strokeWidth={1.7} />
-                        {/* Content */}
-                        <div className="w-full flex flex-col justify-center items-start gap-3">
-                            {/* Title */}
-                            <h3 className="w-full text-[28px] font-medium leading-9">
-                                <span className="text-[#272729]">Acquirer-</span>
-                                <span className="text-[#1876F4] italic">Independent</span>
-                            </h3>
-                            {/* Description */}
-                            <p className="w-full text-[#4A5565] text-base font-normal leading-6">
-                                Easily integrate and switch between multiple bank acquirers to maximise your savings & ensure transaction redundancy.
-                            </p>
-                        </div>
+                        <Zap className="w-8 h-8 text-[#1876F4]" strokeWidth={1.7} />
+                        {/* Title */}
+                        <h3 className="w-full text-[28px] font-medium leading-9">
+                            <span className="text-[#272729]">Acquirer-</span>
+                            <span className="text-[#1876F4] italic">Independent</span>
+                        </h3>
                     </div>
 
                     {/* Fourth Card - Omni-channel Ready */}
-                    <div className="w-full p-7 bg-white rounded-3xl border border-[#45556C]/10 flex flex-col justify-start items-start gap-6">
+                    <div className="w-full p-9 bg-white rounded-[24px] border-[1.5px] border-[#45556C]/10 flex flex-col justify-start items-start gap-8">
                         {/* Icon */}
-                        <Network className="w-9 h-9 text-[#1876F4]" strokeWidth={1.7} />
-                        {/* Content */}
-                        <div className="w-full flex flex-col justify-center items-start gap-3">
-                            {/* Title */}
-                            <h3 className="w-full text-[28px] font-medium leading-9">
-                                <span className="text-[#1876F4] italic">Omni-channel </span>
-                                <span className="text-[#272729]">Ready</span>
-                            </h3>
-                            {/* Description */}
-                            <p className="w-full text-[#4A5565] text-base font-normal leading-6">
-                                Consolidate all physical, online & mobile payments into one central platform to future-proof your business operations.
-                            </p>
-                        </div>
+                        <Network className="w-8 h-8 text-[#1876F4]" strokeWidth={1.7} />
+                        {/* Title */}
+                        <h3 className="w-full text-[28px] font-medium leading-9">
+                            <span className="text-[#1876F4] italic">Omni-channel  </span>
+                            <span className="text-[#272729]">Ready</span>
+                        </h3>
                     </div>
                 </div>
             </div>
 
-            {/* Desktop Layout */}
-            <div className="hidden xl:block max-w-[1920px] mx-auto px-6 lg:px-12 xl:px-[200px] 3xl:px-[320px]">
+            {/* Tablet & Desktop Layout */}
+            <div className="hidden md:block max-w-[1920px] mx-auto px-10 lg:px-12 xl:px-[200px] 3xl:px-[320px]">
                 {/* Grid Container - 3 columns */}
-                <div className="xl:w-[1152px] 3xl:w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="md:w-full lg:w-[900px] xl:w-[1152px] 3xl:w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
 
                     {/* First Card - Spans all 3 columns */}
-                    <div className="lg:col-span-3 bg-white xl:rounded-[22px] 3xl:rounded-[28px] border border-[#45556C]/10 overflow-hidden group">
-                        <div className="grid lg:grid-cols-2 gap-0 pt-3 pb-3 pl-3">
+                    <div className="md:col-span-3 bg-white md:rounded-[18px] lg:rounded-[20px] xl:rounded-[22px] 3xl:rounded-[28px] border border-[#45556C]/10 overflow-hidden group">
+                        <div className="grid md:grid-cols-2 gap-0 pt-2 md:pt-3 pb-2 md:pb-3 pl-2 md:pl-3">
                             {/* Left - Image */}
-                            <div className="relative h-[400px] lg:h-auto overflow-hidden rounded-[20px]">
+                            <div className="relative h-[280px] md:h-[280px] lg:h-[350px] xl:h-auto overflow-hidden rounded-[16px] lg:rounded-[20px]">
                                 <img
                                     src="/payment-choices/keyboard.png"
                                     alt="Payment Choices"
@@ -121,20 +100,20 @@ const Freedom = () => {
                             </div>
 
                             {/* Right - Content */}
-                            <div className="xl:p-9 3xl:p-12 flex flex-col justify-center">
+                            <div className="md:p-6 lg:p-8 xl:p-9 3xl:p-12 flex flex-col justify-center">
                                 {/* Icon */}
-                                <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-lg">
-                                    <Banknote className="text-[#1876F4] group-hover:rotate-[-8deg] transition-transform duration-500" absoluteStrokeWidth size={56} strokeWidth={3.5} />
+                                <div className="w-10 md:w-12 h-10 md:h-12 mb-4 md:mb-6 flex items-center justify-center rounded-lg">
+                                    <Banknote className="text-[#1876F4] group-hover:rotate-[-8deg] transition-transform duration-500" absoluteStrokeWidth size={48} strokeWidth={3.5} />
                                 </div>
 
                                 {/* Title */}
-                                <h2 className="text-[#272729] xl:text-[34px] 3xl:text-[42px] font-medium xl:leading-[42px] 3xl:leading-[52px] mb-4">
+                                <h2 className="text-[#272729] md:text-[28px] lg:text-[32px] xl:text-[34px] 3xl:text-[42px] font-medium md:leading-[36px] lg:leading-[40px] xl:leading-[42px] 3xl:leading-[52px] mb-3 md:mb-4">
                                     Freedom in<br />
                                     Payment Choices
                                 </h2>
 
                                 {/* Description */}
-                                <p className="text-[#4A5565] xl:text-base 3xl:text-[20px] xl:leading-6 3xl:leading-[28px]">
+                                <p className="text-[#4A5565] md:text-sm lg:text-base xl:text-base 3xl:text-[20px] md:leading-5 lg:leading-6 xl:leading-6 3xl:leading-[28px]">
                                     Build your payment ecosystem your way
                                 </p>
                             </div>
@@ -142,57 +121,42 @@ const Freedom = () => {
                     </div>
 
                     {/* Second Card - Hardware-Agnostic */}
-                    <div className="bg-white xl:rounded-[20px] 3xl:rounded-[24px] border border-[#45556C]/10 xl:p-6 3xl:p-8 flex flex-col group">
+                    <div className="bg-white rounded-[24px] border-[1.5px] border-[#45556C]/10 p-9 flex flex-col justify-start items-start gap-8 group h-full">
                         {/* Icon */}
-                        <div className="mb-6 flex rounded-lg">
-                            <Cpu className="text-[#1876F4] group-hover:rotate-[-8deg] transition-transform duration-500" absoluteStrokeWidth size={32} strokeWidth={2} />
+                        <div className="w-[42px] h-[42px] flex items-center justify-center">
+                            <Cpu className="text-[#1876F4] group-hover:rotate-[-8deg] transition-transform duration-500" size={35} strokeWidth={2.5} absoluteStrokeWidth />
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-[#272729] xl:text-[22px] 3xl:text-[28px] font-medium xl:leading-[30px] 3xl:leading-[36px] mb-3">
-                            Hardware-<span className="italic text-[#1876F4]">Agnostic</span>
+                        <h3 className="text-[#272729] text-[36px] font-medium leading-[48px]">
+                            Hardware-<br /><span className="italic text-[#1876F4]">Agnostic</span>
                         </h3>
-
-                        {/* Description */}
-                        <p className="text-[#4A5565] text-[14px] leading-[20px]">
-                            Deploy instantly across your existing setup. Our flexibility ensures seamless compatibility with virtually any payment hardware.
-                        </p>
                     </div>
 
                     {/* Third Card - Acquirer-Independent */}
-                    <div className="bg-white xl:rounded-[20px] 3xl:rounded-[24px] border border-[#45556C]/10 xl:p-6 3xl:p-8 flex flex-col group">
+                    <div className="bg-white rounded-[24px] border-[1.5px] border-[#45556C]/10 p-9 flex flex-col justify-start items-start gap-8 group h-full">
                         {/* Icon */}
-                        <div className="mb-6 flex rounded-lg">
-                            <Zap className="text-[#1876F4] group-hover:rotate-[-8deg] transition-transform duration-500" absoluteStrokeWidth size={32} strokeWidth={2} />
+                        <div className="w-[42px] h-[42px] flex items-center justify-center">
+                            <Zap className="text-[#1876F4] group-hover:rotate-[-8deg] transition-transform duration-500" size={35} strokeWidth={2.5} absoluteStrokeWidth />
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-[#272729] xl:text-[22px] 3xl:text-[28px] font-medium xl:leading-[30px] 3xl:leading-[36px] mb-3">
-                            Acquirer-<span className="italic text-[#1876F4]">Independent</span>
+                        <h3 className="text-[#272729] text-[36px] font-medium leading-[48px]">
+                            Acquirer-<br /><span className="italic text-[#1876F4]">Independent</span>
                         </h3>
-
-                        {/* Description */}
-                        <p className="text-[#4A5565] text-[14px] leading-[20px]">
-                            Easily integrate and switch between multiple bank acquirers to maximize your savings and ensure transaction redundancy.
-                        </p>
                     </div>
 
                     {/* Fourth Card - Omni-channel Ready */}
-                    <div className="bg-white xl:rounded-[20px] 3xl:rounded-[24px] border border-[#45556C]/10 xl:p-6 3xl:p-8 flex flex-col group">
+                    <div className="bg-white rounded-[24px] border-[1.5px] border-[#45556C]/10 p-9 flex flex-col justify-start items-start gap-8 group h-full">
                         {/* Icon */}
-                        <div className="mb-6 flex rounded-lg">
-                            <Network className="text-[#1876F4] group-hover:rotate-[-8deg] transition-transform duration-500" absoluteStrokeWidth size={32} strokeWidth={2} />
+                        <div className="w-[42px] h-[42px] flex items-center justify-center">
+                            <Network className="text-[#1876F4] group-hover:rotate-[-8deg] transition-transform duration-500" size={35} strokeWidth={2.5} absoluteStrokeWidth />
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-[#272729] xl:text-[22px] 3xl:text-[28px] font-medium xl:leading-[30px] 3xl:leading-[36px] mb-3">
-                            <span className="italic text-[#1876F4] pr-1">Omni-channel</span> Ready
+                        <h3 className="text-[#272729] text-[36px] font-medium leading-[48px]">
+                            <span className="italic text-[#1876F4]">Omni-channel</span><br /> Ready
                         </h3>
-
-                        {/* Description */}
-                        <p className="text-[#4A5565] text-[14px] leading-[20px]">
-                            Consolidate all physical, online, and mobile payments into one central platform to future-proof your business operations.
-                        </p>
                     </div>
 
                 </div>
