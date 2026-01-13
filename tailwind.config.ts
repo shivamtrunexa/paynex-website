@@ -5,15 +5,10 @@ export default {
     content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
     prefix: "",
     theme: {
-        // container: {
-        //     center: true,
-        //     padding: "2rem",
-        //     screens: {
-        //         "2xl": "1400px",
-        //     },
-        // },
         extend: {
             screens: {
+                'md': '768px',    // 48rem - tablet portrait
+                'lg': '1024px',   // 64rem - tablet landscape
                 'xl': '1440px',   // 90rem - for medium-large screens
                 '3xl': '1920px',  // 120rem
                 '4xl': '2560px',  // 160rem
@@ -105,4 +100,3 @@ export default {
     },
     plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-

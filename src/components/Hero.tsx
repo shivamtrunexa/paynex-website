@@ -64,7 +64,7 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-[50px] lg:gap-12 pt-[50px] lg:pt-0">
           {/* Left Segment - Hero Content */}
           <motion.div
-            className="w-full lg:flex-1 xl:max-w-[580px] 3xl:max-w-[761px] xl:h-[580px] 3xl:h-[680px] flex flex-col justify-between items-center lg:items-start"
+            className="w-full lg:flex-1 lg:max-w-[480px] xl:max-w-[580px] 3xl:max-w-[761px] lg:h-[460px] xl:h-[580px] 3xl:h-[680px] flex flex-col justify-between items-center lg:items-start"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -74,7 +74,7 @@ const Hero = () => {
               {/* Title */}
               <motion.div className="w-full" variants={itemVariants}>
                 <h1
-                  className="text-center lg:text-left text-[40px] lg:text-[60px] xl:text-[60px] 3xl:text-[80px] leading-[54px] lg:leading-[1.1] font-medium tracking-normal text-[#272729]"
+                  className="text-center lg:text-left text-[40px] lg:text-[48px] xl:text-[60px] 3xl:text-[80px] leading-[54px] lg:leading-[1.1] font-medium tracking-normal text-[#272729]"
                   style={{ fontFamily: 'Instrument Sans' }}
                 >
                   Powering Future of
@@ -88,10 +88,10 @@ const Hero = () => {
                 className="w-full text-center lg:text-left text-[#45556C] text-base lg:text-base xl:text-base 3xl:text-xl leading-6 lg:leading-6 xl:leading-6 3xl:leading-7"
                 variants={itemVariants}
               >
-                One secure, scalable platform to integrate, accept and
+                A secure, modular payment platform enabling seamless EMV, NFC, QR and
                 <span className="hidden lg:inline"><br /></span>
                 <span className="lg:hidden"> </span>
-                control every transaction globally
+                digital transactions across transit, mobility and enterprise use cases
               </motion.p>
 
               {/* CTA Buttons */}
@@ -164,19 +164,19 @@ const Hero = () => {
               </div>
 
               {/* Partners Logos - Horizontal scroll on mobile */}
-              <div className="w-full opacity-80 flex justify-between lg:justify-start items-center gap-4 lg:gap-8 xl:scale-90 3xl:scale-100 lg:origin-left overflow-x-auto pb-2 lg:pb-0">
-                <img src="/partners/moneris.svg" alt="Moneris" className="h-[18px] lg:h-8 object-contain transition-all flex-shrink-0" />
-                <img src="/partners/littlepay.svg" alt="littlepay" className="h-[18px] lg:h-8 object-contain transition-all flex-shrink-0" />
-                <img src="/partners/idtech.svg" alt="IDTech" className="h-[18px] lg:h-8 object-contain transition-all flex-shrink-0" />
-                <img src="/partners/auropay.png" alt="AuroPay" className="h-[18px] lg:h-8 object-contain transition-all flex-shrink-0" />
-                <img src="/partners/aurotransit.png" alt="AuroTransit" className="h-[18px] lg:h-8 object-contain transition-all flex-shrink-0" />
+              <div className="w-full opacity-80 flex justify-between lg:justify-start items-center gap-4 lg:gap-4 xl:gap-8 lg:scale-76   xl:scale-90 3xl:scale-100 lg:origin-left overflow-x-auto pb-2 lg:pb-0">
+                <img src="/partners/moneris.svg" alt="Moneris" className="h-[18px] lg:h-6 xl:h-8 object-contain transition-all flex-shrink-0" />
+                <img src="/partners/littlepay.svg" alt="littlepay" className="h-[18px] lg:h-6 xl:h-8 object-contain transition-all flex-shrink-0" />
+                <img src="/partners/idtech.svg" alt="IDTech" className="h-[18px] lg:h-6 xl:h-8 object-contain transition-all flex-shrink-0" />
+                <img src="/partners/auropay.png" alt="AuroPay" className="h-[18px] lg:h-6 xl:h-8 object-contain transition-all flex-shrink-0" />
+                <img src="/partners/aurotransit.png" alt="AuroTransit" className="h-[18px] lg:h-6 xl:h-8 object-contain transition-all flex-shrink-0" />
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Right Segment - Hero Image (Desktop Only) */}
+          {/* Right Segment - Hero Image (Tablet & Desktop) */}
           <motion.div
-            className="hidden lg:flex xl:w-[520px] 3xl:w-[700px] xl:h-[580px] 3xl:h-[680px] relative bg-[#F1F1F1] overflow-hidden xl:rounded-[32px] 3xl:rounded-[42px] items-center justify-center"
+            className="hidden lg:flex lg:w-[380px] xl:w-[520px] 3xl:w-[700px] lg:h-[380px] xl:h-[580px] 3xl:h-[680px] relative bg-[#F1F1F1] overflow-hidden lg:rounded-[24px] xl:rounded-[32px] 3xl:rounded-[42px] items-center justify-center"
             variants={imageVariants}
             initial="hidden"
             animate="visible"
@@ -184,7 +184,7 @@ const Hero = () => {
             <img
               src="/partners/Hero Image.png"
               alt="Payment Ecosystem"
-              className="xl:w-[440px] 3xl:w-[584px] xl:h-[375px] 3xl:h-[497px] object-contain"
+              className="lg:w-[320px] xl:w-[440px] 3xl:w-[584px] lg:h-[280px] xl:h-[375px] 3xl:h-[497px] object-contain"
             />
           </motion.div>
         </div>

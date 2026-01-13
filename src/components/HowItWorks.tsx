@@ -23,7 +23,7 @@ const HowItWorks = () => {
                     />
                     {/* Desktop Image */}
                     <img
-                        src="/howitworks/how it works.svg"
+                        src="/howitworks/how-it-works.svg"
                         alt="Payment flow diagram showing the journey from customer through merchant, payment gateway, issuing bank, to card networks"
                         className="hidden md:block w-full max-w-6xl mx-auto justify-center items-center xl:scale-[90%] 3xl:scale-100 xl:py-[20px] 3xl:py-[100px] 3xl:mt-0"
                     />

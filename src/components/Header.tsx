@@ -3,15 +3,16 @@ import { useState, useEffect, useRef } from "react";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [activeSection, setActiveSection] = useState("about");
+    const [activeSection, setActiveSection] = useState("home");
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
     const [isScrolling, setIsScrolling] = useState(false);
     const navRef = useRef<HTMLDivElement>(null);
     const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     const navLinks = [
+        { label: "Home", href: "#home" },
         { label: "About", href: "#about" },
-        { label: "Operations", href: "#operations" },
+        // { label: "Operations", href: "#operations" },
         { label: "Domains", href: "#domains" },
         { label: "Products", href: "#products" },
         { label: "Contact", href: "#contact" },

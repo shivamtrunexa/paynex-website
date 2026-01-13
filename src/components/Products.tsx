@@ -91,6 +91,22 @@ const AnimatedProductCard = ({
                     ))}
                 </div>
             </div>
+
+            {/* Download Brochure Button */}
+            <motion.div
+                className="px-4 py-1.5 rounded-[10px] flex justify-center items-center gap-2.5 cursor-pointer"
+                animate={{
+                    backgroundColor: isInView ? "#171717" : "#25252E"
+                }}
+                transition={{
+                    duration: 0.4,
+                    ease: "easeOut"
+                }}
+            >
+                <p className="text-[#EFEFEF] text-sm font-normal leading-7">
+                    Download Brochure
+                </p>
+            </motion.div>
         </motion.div>
     );
 };
@@ -124,13 +140,13 @@ const Products = () => {
         {
             icon: "/products/nextap.svg",
             title: "NexTap",
-            subtitle: "The Integrated L3 Payment Appliance",
-            description: "The ready-to-deploy reader, integrating certified L3 intelligence for instant, secure, and easy-to-use retail payment acceptance.",
+            subtitle: "The Ready-to-Deploy POS Terminal",
+            description: "Integrates seamlessly into existing systems, allowing OEMs to add certified and secure payment capabilities with minimal effort.",
             highlights: [
-                "Single-Unit Payment Acceptance",
-                "Universal Retail Deployment",
-                "Simplified Integration SDK",
-                "Rugged Form Factor"
+                "Easy Mounting",
+                "Simplified SDK for Salve-Master communication",
+                "Data connectivity",
+                "Tailored to your needs"
             ]
         }
     ];
@@ -239,6 +255,13 @@ const Products = () => {
                                         </div>
                                     ))}
                                 </div>
+                            </div>
+
+                            {/* Download Brochure Button */}
+                            <div className="px-4 py-1.5 bg-[#25252E] group-hover:bg-[#171717] rounded-[10px] flex justify-center items-center gap-2.5 transition-colors duration-300 cursor-pointer">
+                                <p className="text-[#EFEFEF] text-sm font-normal leading-7">
+                                    Download Brochure
+                                </p>
                             </div>
                         </div>
                     ))}
